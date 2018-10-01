@@ -28,11 +28,11 @@
 
     <form>
       <div class="form-group">
-        <label for="exampleFormControlTextarea1"></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste your HTML..."></textarea>
+        <label for="acronymTextarea"></label>
+        <textarea class="form-control" id="acronymTextarea" rows="3" placeholder="Paste your HTML..."></textarea>
 
       </div>
-      <button type="button" class="btn btn-success">Add HTML Tag</button> <input class="btn btn-primary" type="reset" value="Reset">
+      <button id="acronymAddTag" type="button" class="btn btn-success">Add HTML Tag</button> <input id="acronymReset" class="btn btn-primary" type="reset" value="Reset">
 
     </form>
 
@@ -93,6 +93,13 @@
         el.value = html;
       })
     }
+	$('#acronymAddTag').click(function() {
+		$(this).prop('disabled', true);
+	});
+	
+	$('#acronymReset').click(function() {
+		$('#acronymAddTag').prop('disabled', false);
+	});
   </script>
 
   
