@@ -16,6 +16,18 @@
 
   <!-- Custom styles for this template -->
   <link href="assets/css/sticky-footer.css" rel="stylesheet">
+	
+  <style>
+	.sr-only {
+	    position: absolute !important;
+	    clip: rect(1px, 1px, 1px, 1px);
+	    padding: 0 !important;
+	    border: 0 !important;
+	    height: 1px !important;
+	    width: 1px !important;
+	    overflow: hidden;
+	  }
+  </style>
   
 </head>
 
@@ -30,7 +42,7 @@
         <textarea aria-label="Paste your HTML..." class="form-control" id="acronymTextarea" rows="3" placeholder="Paste your HTML..."></textarea>
 
       </div>
-      <button aria-label="Add HTML Tag" id="acronymAddTag" type="button" class="btn btn-success">Add HTML Tag</button> <input aria-label="Reset" id="acronymReset" class="btn btn-primary" type="reset" value="Reset">
+      <button aria-label="Add HTML Tag" id="acronymAddTag" type="button" class="btn btn-success">Add HTML Tag</button><label class="sr-only" for="acronymReset">Reset form</label> <input aria-label="Reset" id="acronymReset" class="btn btn-primary" type="reset" value="Reset">
 
     </form>
 
