@@ -26,8 +26,8 @@
         var html = el.value;
         for (var i = 0; i < len; i++) {
 			
-			//acronimi[i].replace(".", "\.");
-			console.log(acronimi[i]);
+			acronimi[i].replace(".", "\\.");
+			//console.log(acronimi[i]);
           var re = new RegExp('(?<!<[^>]*)\\b(' + acronimi[i] + ')\\b', 'i');
           html = html.replace(re, '<abbr title="' + titles[i] + '">$1</abbr>');
         }
