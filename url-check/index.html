@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="Free Web tutorials" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>URL fetch</title>
+  </head>
+
+  <body>
+    <!-- <div id="particles-js"></div> -->
+
+    <div class="container pt-4">
+      <h1 class="display-5 text-center pb-4">metatag url check</h1>
+      <div class="row justify-content-center align-items-center">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-4">
+          <form action="&&">
+            <div class="input-group mb-3">
+              <input type="url" class="form-control" id="url"
+                placeholder="please add url to check..." aria-label="check your
+                url"
+                aria-describedby="url" required/>
+
+              <div class="input-group-append">
+                <button
+                  class="btn btn-danger text-uppercase" id="send" type="button">check</button>
+                <button class="btn btn-outline-secondary text-uppercase"
+                  type="reset" onclick="document.location.reload()">
+                  RESET
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="col-8 d-none" id="progbar">
+        
+     
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+      </div>
+
+
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="col-8" id="alert"></div>
+    </div>
+  
+
+    <div class="container">
+      <table class="table w-75 table-bordered table-striped table-hover d-none" 
+        id="my-table"> 
+        <!-- d-none -->
+        <thead>
+          <tr>
+            <th>Info</th>
+
+            <th>Dettagli</th>
+
+            <th>...</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Titolo</th>
+            <td id="tit"></td>
+            <td><span class="badge badge-success d-none">OK</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">OG:DESC</th>
+            <td id="ogdesc"></td>
+            <td><span class="badge badge-success d-none">OK</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">OG:TITLE</th>
+            <td id="ogtitle"></td>
+            <td><span class="badge badge-success d-none">OK</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">OG:URL</th>
+            <td id="ogurl"></td>
+            <td><span class="badge badge-success d-none">OK</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">OG:IMAGE</th>
+
+            <td id="img" class="img-bundle"></td>
+            <td id="checkimg"></td>
+          </tr>
+
+        
+
+          <tr>
+            <th scope="row">Autore</th>
+            <td id="auth"></td>
+            <td><span class="badge badge-success d-none">OK</span></td>
+          </tr>
+
+         
+          <tr>
+            <th scope="row">Dominio</th>
+            <td id="domain"></td>
+            <td><span class="badge badge-success d-none">OK</span></td>
+          </tr>
+
+         
+        </tbody>
+      </table>
+    </div>
+    <div class="clearfix">&nbsp</div>
+
+
+
+
+    <script src="js/lib/jquery-3.4.1.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/url.js"></script>
+    <!-- <script src="js/particles.js"></script>
+    <script src="js/app.js"></script> -->
+
+  </body>
+</html>

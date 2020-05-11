@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+
+form {
+  .form-control {
+    font-size: 0.8rem;
+    color: #ced4da;
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+}
+
+.img-bundle {
+  position: relative;
+}
+
+ .progress {
+   margin: 10px;
+}
+
+.table {
+  margin: auto;
+
+  
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  // background-color: #b61924;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+}
