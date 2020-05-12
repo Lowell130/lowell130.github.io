@@ -22,7 +22,7 @@ function metaExtract() {
 			}, 2000);
 		});
 
-	
+
 
 	} else {
 		$.ajax({
@@ -33,20 +33,16 @@ function metaExtract() {
 			async: true,
 			success: function (data) {
 
+		
+		
 
 				var title
-				// var description				
+				var description
 				var author
-
-
-
-				var fbogImage				
+				var fbogImage
 				var fbTitle
 				var ogDescription
 				var ogUrl
-				
-
-
 				var checkImg
 
 				// estrae nome dominio
@@ -57,6 +53,16 @@ function metaExtract() {
 
 
 				document.getElementById('domain').innerHTML = domain;
+
+
+				description = $(data).filter('meta[name="description"]').attr("content");
+				if (description == null) {
+
+					document.getElementById('desc').innerHTML = 'Non è possibile recuperare il titolo';
+
+				} else {
+					document.getElementById('desc').innerHTML = description;
+				}
 
 				title = data.match("<title>(.*?)</title>")[1];
 				if (title == null) {
@@ -72,8 +78,8 @@ function metaExtract() {
 					document.getElementById('ogurl').innerHTML = 'Non è possibile recuperare la descrizione';
 
 				} else {
-					document.getElementById('ogurl').innerHTML = `<a href="`+ogUrl+`">`+ogUrl+`</a>`;
-					
+					document.getElementById('ogurl').innerHTML = `<a href="` + ogUrl + `">` + ogUrl + `</a>`;
+
 				}
 
 
@@ -95,7 +101,7 @@ function metaExtract() {
 				}
 
 
-			
+
 
 
 				ogDescription = $(data).filter('meta[property="og:description"]').attr("content");
@@ -106,7 +112,7 @@ function metaExtract() {
 					document.getElementById('ogdesc').innerHTML = ogDescription;
 				}
 
-			
+
 
 
 				author = $(data).filter('meta[name="author"]').attr("content");
@@ -116,7 +122,18 @@ function metaExtract() {
 					document.getElementById('auth').innerHTML = author;
 				}
 
-
+				var ogImgWidth = $(data).filter('meta[property="og:image:width"]').attr("content");
+				if (ogImgWidth == null) {
+					console.log('N/P');
+				} else {
+					console.log(ogImgWidth);
+				}
+				var ogImgHeight = $(data).filter('meta[property="og:image:height"]').attr("content");
+				if (ogImgHeight == null) {
+					console.log('N/P');
+				} else {
+					console.log(ogImgHeight);
+				}
 
 				var tinyimg = 'https://tineye.com/search?pluginver=bookmark_1.0&url=';
 
@@ -129,45 +146,45 @@ function metaExtract() {
 					checkImg = document.getElementById('checkimg').innerHTML = '<small><a target="_blank" href="' + tinyimg + fbogImage + '">Verifica attendibilità immagine</a></small>';
 				}
 
-				
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 				var $progress = $('.progress');
 				var $progressBar = $('.progress-bar');
 				//$progress.css('display', 'block');
-				
-				
-				setTimeout(function() {
+
+
+				setTimeout(function () {
 					document.getElementById("progbar").className =
-								document.getElementById("progbar").className.replace
-									(/(?:^|\s)d-none(?!\S)/g, '')
-				
-				
+						document.getElementById("progbar").className.replace
+							(/(?:^|\s)d-none(?!\S)/g, '')
+
+
 					$progressBar.css('width', '10%');
-					setTimeout(function() {
+					setTimeout(function () {
 						$progressBar.css('width', '30%');
-						setTimeout(function() {
+						setTimeout(function () {
 							$progressBar.css('width', '100%');
-							setTimeout(function() {
+							setTimeout(function () {
 								$progress.css('display', 'none');
 								document.getElementById("my-table").className =
-								document.getElementById("my-table").className.replace
-									(/(?:^|\s)d-none(?!\S)/g, '')
+									document.getElementById("my-table").className.replace
+										(/(?:^|\s)d-none(?!\S)/g, '')
 							}, 500); // WAIT 5 milliseconds
 						}, 2000); // WAIT 2 seconds
 					}, 1000); // WAIT 1 seconds
 				}, 1000); // WAIT 1 second
-
-
-				
-							
-								
-				
-
-
-				
-
-
 			},
 			fail: function () {
 				console.log("Encountered an error");
