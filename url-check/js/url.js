@@ -1,4 +1,11 @@
 "use strict";
+
+
+
+	
+
+
+
 function metaExtract() {
 	var grabUrl
 	grabUrl = document.getElementById('url').value;
@@ -83,15 +90,6 @@ function metaExtract() {
 				}
 
 
-
-
-
-
-
-
-
-
-
 				fbTitle = $(data).filter('meta[property="og:title"]').attr("content");
 				if (fbTitle == null) {
 					document.getElementById('ogtitle').innerHTML = 'Non è possibile recuperare la descrizione';
@@ -101,10 +99,7 @@ function metaExtract() {
 				}
 
 
-
-
-
-				ogDescription = $(data).filter('meta[property="og:description"]').attr("content");
+			ogDescription = $(data).filter('meta[property="og:description"]').attr("content");
 				if (ogDescription == null) {
 					document.getElementById('ogdesc').innerHTML = 'Non è possibile recuperare la descrizione';
 
