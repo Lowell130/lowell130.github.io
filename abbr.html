@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">	
+
+  <title>Acronyms to HTML converter</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/sticky-footer.css" rel="stylesheet">
+	
+  <style>
+	.sr-only {
+	    position: absolute !important;
+	    clip: rect(1px, 1px, 1px, 1px);
+	    padding: 0 !important;
+	    border: 0 !important;
+	    height: 1px !important;
+	    width: 1px !important;
+	    overflow: hidden;
+	  }
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <h1 class="mt-5">Acronyms to HTML converter</h1>
+    <form>
+      <div class="form-group">
+	 <label class="lead" for="acronymTextarea">Paste HTML code in textarea, than press "Add HTML Tag" button:</label>
+        <textarea aria-label="Paste your HTML..." class="form-control" id="acronymTextarea" rows="3" placeholder="Paste your HTML..."></textarea>
+
+      </div>
+      <button aria-label="Add HTML Tag" id="acronymAddTag" type="button" class="btn btn-success">Add HTML Tag</button><label class="sr-only" for="acronymReset">Reset form</label> <input aria-label="Reset" id="acronymReset" class="btn btn-primary" type="reset" value="Reset">
+
+    </form>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted"><a aria-label="Add new acronym definition Link to external site" target="_blank" href="https://docs.google.com/spreadsheets/d/1jmXKA6WCECNBTA9_zF22ZppJpQ28MHuJiu5-kvpYrB0/edit#gid=0">Add new</a> acronym definition | See on <a target="_blank" href="https://github.com/Lowell130/lowell130.github.io">GitHub</a></span>
+    </div>
+  </footer>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="script.js"></script>  
+
+</body>
+
+</html>
