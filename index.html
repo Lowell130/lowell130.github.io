@@ -8,25 +8,103 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
-    <title>MefTools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <title>InterpGenerator</title>
 </head>
 
 <body>
+ 
+   
+  
     <div class="container my-4">
-        <div class="col-md-6">
-        <ul>
-            <li><a href="abbr.html">AbbrGenerator</a></li>
-            <li><a href="url-check/index.html">LinkCheckerOG</a></li>
-            <li><a href="interpelli/index.html">InterpGenerator</a></li>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                    
+                <div class="mb-3">
+                    <label for="titleInter" class="form-label">Titolo</label>
+                    <input type="text" class="form-control" id="titleInter" aria-describedby="" required>
+                    <div id="emailHelp1" class="form-text">Denominazione interpello</div>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" id="allegatoPt" aria-label="Default select example">
+                    
+                        <option value="1">/concorsi/2020/documenti/concorso_0001/</option>
+                        <option value="2">/concorsi/2020/documenti/concorso_0002/</option>
+                        <option value="3">/concorsi/2020/documenti/concorso_0003/</option>
+                        <option value="4">/concorsi/2020/documenti/concorso_0004/</option>
+                        <option value="5">/concorsi/2020/documenti/concorso_0005/</option>
+                      </select>
+                      <div id="emailHelp2" class="form-text">Selezionare percorso relativo file</div>
+                </div>
+                <div class="mb-3">
+                    <label for="allegato" class="form-label">Allegato</label>
+                    <input type="text" class="form-control" id="allegato" aria-describedby="" required>
+                    <div id="emailHelp2" class="form-text">Inserire nome file - "es. documento.pdf"</div>
+                </div>
+             
 
-        </ul>
+                <div class="mb-3">
+                    <label for="pesoAllegato" class="form-label">Peso allegato</label>
+                    <input type="text" class="form-control" id="pesoAllegato" aria-describedby="" required>
+                    <div id="emailHelp3" class="form-text">Scrivere peso in KB/MB del file - "es. 144 KB"</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="startr" class="form-label">Data pubblicazione</label>
+                    <input type="text" class="form-control" id="start" aria-describedby="" required>
+                    <div id="emailHelp4" class="form-text">Aggiungere data di pubblicazione - "es. 29 luglio 2020"</div>
+                </div>
+                <div class="mb-3">
+                    <label for="end" class="form-label">Data scadenza</label>
+                    <input type="text" class="form-control" id="end" aria-describedby="" required>
+                    <div id="emailHelp5" class="form-text">Aggiungere data di scadenza "es. 10 settembre 2020"</div>
+                </div>
+
+                <button type="button" onclick="pr()" id="btn" class="btn btn-primary btn-lg w-100">Genera</button>
+                </div>
+              
+                <div class="col-md-6">
+              
+                <div class="my-3">
+                    <label for="result" class="form-label">Codice da copiare e incollare</label>  
+                    <textarea class="form-control" id="result" rows="10"></textarea>    
+                                
+                  </div>
+                </div>
+
+                </div>
+
+            </form>
+
+          
+            
+        </div>
     </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="../interpelli/js/app.js"></script>
 </body>
 
 </html>
