@@ -1,6 +1,11 @@
 var btnState = '';
 function pr() {
   title = document.getElementById('titleInter').value;
+
+  
+  var urlPath = document.getElementById('allegatoPt');
+  var textUrl= urlPath.options[urlPath.selectedIndex].text;
+
   url = document.getElementById('allegato').value;
   size = document.getElementById('pesoAllegato').value;
   start = document.getElementById('start').value;
@@ -16,7 +21,7 @@ function pr() {
   var newContent = '';
   //  variabili per la costruzione
   newContent += '<li class="pb-3">';
-  newContent += '<a title="Apertura in nuova scheda" href="' + url + '" target="_blank" rel="noopener" aria-label="' + title + ' (PDF, ' + size + ') - Apertura in nuova scheda">' + title + '</a>';
+  newContent += '<a title="Apertura in nuova scheda" href="'+ textUrl + url + '" target="_blank" rel="noopener" aria-label="' + title + ' (PDF, ' + size + ') - Apertura in nuova scheda">' + title + '</a>';
   newContent += '<br />';
   newContent += 'Data di pubblicazione: ' + start + '<br />';
   newContent += 'Data scadenza: ' + end;
