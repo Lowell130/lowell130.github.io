@@ -1,10 +1,9 @@
 var btnState = '';
 function pr() {
-  title = document.getElementById('titleInter').value;
+  title = document.getElementById('titleInter').value.replace(/[^a-zA-Z0-9]/g, "");
 
-  
   var urlPath = document.getElementById('allegatoPt');
-  var textUrl= urlPath.options[urlPath.selectedIndex].text;
+  var textUrl = urlPath.options[urlPath.selectedIndex].text;
 
   url = document.getElementById('allegato').value;
   size = document.getElementById('pesoAllegato').value;
@@ -12,8 +11,8 @@ function pr() {
   end = document.getElementById('end').value;
   btnState = document.getElementById('btn');
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
- 
- 
+
+
 
   // Example starter JavaScript for disabling form submissions if there are invalid fields
 
@@ -21,10 +20,10 @@ function pr() {
   var newContent = '';
   //  variabili per la costruzione
   newContent += '<li class="pb-3">';
-  newContent += '<a title="Apertura in nuova scheda" href="'+ textUrl + url + '" target="_blank" rel="noopener" aria-label="' + title + ' (PDF, ' + size +') - Apertura in nuova scheda">' + title + '</a>';
+  newContent += '<a title="Apertura in nuova scheda" href="' + textUrl.trim() + url.trim() + '" target="_blank" rel="noopener" aria-label="' + title.trim() + ' (PDF, ' + size.trim() + ') - Apertura in nuova scheda">' + title.trim() + '</a>';
   newContent += '<br />';
-  newContent += 'Data di pubblicazione: ' + start + '<br />';
-  newContent += 'Data scadenza: ' + end;
+  newContent += start.trim() + '<br />';
+  newContent += end.trim();
   newContent += '</li>';
 
 
@@ -32,7 +31,7 @@ function pr() {
   var el = document.getElementById('result');
   el.textContent = newContent;
 
-  
+
 }
 
 
