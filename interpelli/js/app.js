@@ -1,6 +1,6 @@
 var btnState = '';
 function pr() {
-  title = document.getElementById('titleInter').value.replace(/[^a-zA-Z0-9]/g, "");
+  title = document.getElementById('titleInter').value;
 
   var urlPath = document.getElementById('allegatoPt');
   var textUrl = urlPath.options[urlPath.selectedIndex].text;
@@ -20,7 +20,7 @@ function pr() {
   var newContent = '';
   //  variabili per la costruzione
   newContent += '<li class="pb-3">';
-  newContent += '<a title="Apertura in nuova scheda" href="' + textUrl + url.trim() + '" target="_blank" rel="noopener" aria-label="' + title + ' (PDF, ' + size.trim() + ') - Apertura in nuova scheda">' + title.trim() + '</a>';
+  newContent += '<a title="Apertura in nuova scheda" href="' + textUrl + url.trim() + '" target="_blank" rel="noopener" aria-label="' + title.trim() + ' (PDF, ' + size.trim() + ') - Apertura in nuova scheda">' + title.trim() + '</a>';
   newContent += '<br />';
   newContent += start.trim() + '<br />';
   newContent += end.trim();
